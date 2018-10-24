@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
+<script src='http://use.edgefonts.net/de-walpergens-pica.js'></script>
+<script src='http://use.edgefonts.net/nosifer.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  	margin: 0;
+  	padding: 0;
+  	border: 0;
+  	font-size: 100%;
+  	vertical-align: baseline;
+  }
+
+  html {
+      font-family: "Lucida Sans", sans-serif;
+      background-color: white;
+  }
+body{
+  background-image: url("d.jpg");
+}
+
+/*--- For the colored scrollbar ---*/
+/* width */
+::-webkit-scrollbar { width: 10px; height: 4px; }
+/* Track */
+::-webkit-scrollbar-track { background: black; }
+/* Handle */
+::-webkit-scrollbar-thumb { background: black; }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+  .gameHeaderDiv {
+      background-color: black;
+      padding: 15px;
+      color: orange;
+  }
+  h1{
+    font-family: Eater;
+    font-size: 44px;
+  }
+
+  .gameDiv {
+    padding: 35px;
+    padding-right: 0px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100vh;
+    background: black;
+    color: white;
+    display: none;
+  }
+
+  .startGameDiv {
+    padding: 35px;
+    padding-right: 0px;
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 100vh;
+    background: black;
+    color: white;
+    text-align:center;
+  }
+  .gameTextDiv{
+    font-family:de-walpergens-pica;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .gameTextDiv {
+        font-size: 30px;
+    }
+
+    .gameDiv{
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .gameTextDiv {
+        font-size: 28px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .gameTextDiv {
+        font-size: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .gameTextDiv {
+        font-size: 25px;
+    }
+    .gameDiv{
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  }
+
+  .gameButtonDiv{
+    padding-left: 5%;
+  }
+
+  .choiceButton{
+    max-width:90%;
+    min-width: 50%;
+    white-space: normal !important;
+    text-align: left;
+    height: 30px;
+    font-size: 23px;
+    font-weight: 200;
+    color: white;
+    font-family: de-walpergens-pica;
+    padding-left: 5%;
+    border: none;
+    background-color: black;
+    border-radius: 50px;
+
+    margin-bottom: 24px;
+
+    box-shadow: 0 1px 12px 0 rgba(225, 225, 225, 1.0);
+
+  }
+  .choiceButton:hover{
+    color: darkred;
+    box-shadow: 0 1px 12px 0 darkred;
+  }
+  .choiceButton:focus, .startButton:focus {
+      outline: none;
+  }
+
+  .startButton{
+    font-family:nosifer;
+    color:red;
+    font-size:50px;
+
+    background-color: black;
+    border: none;
+    text-align: center;
+    margin: 4px 2px;
+    height: 50vh;
+  }
+
+
+
+.startButton:active{
+  transform: translateY(4px);
+}
+
+</style>
+<script>
+
+$(document).ready(function(){
+    $(".startButton").click(function(){
+        $(".startButton").fadeOut()
+        $(".startGameDiv").fadeOut(3000)
+        $(".gameDiv").delay(3000).fadeIn(3000)
+    });
+});
+</script>
+</head>
+<body>
+
+<!-- The Halloween Header -->
+<div class="gameHeaderDiv">
+  <h1>Halloween</h1>
+</div>
+
+<div class="startGameDiv">
+  <button class="startButton" >START</button>
+</div>
+
+<div class="gameDiv">
+  <p class="gameTextDiv">
+    Chania is the capital of the Chania region on the island of Crete.
+    The city can be divided in two parts, the old town and the modern city.</p>
+  <div class="gameButtonDiv">
+    <button class="choiceButton">A. Walk to the bar</button>
+    <button class="choiceButton">B. Ask where you are</button>
+    <button class="choiceButton">C. Look around</button>
+    <button class="choiceButton">D. Get in a fight</button>
+  </div>
+</div>
+
+</body>
+</html>
