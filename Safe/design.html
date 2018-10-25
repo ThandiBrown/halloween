@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link href='https://fonts.googleapis.com/css?family=Eater' rel='stylesheet'>
-<script src='http://use.edgefonts.net/de-walpergens-pica.js'></script>
-<script src='http://use.edgefonts.net/nosifer.js'></script>
+<link href='https://fonts.googleapis.com/css?family=IM Fell DW Pica' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 
@@ -73,7 +73,7 @@ body{
     text-align:center;
   }
   .gameTextDiv{
-    font-family:de-walpergens-pica;
+    font-family:IM Fell DW Pica;
     font-size: 36px;
     margin-bottom: 40px;
   }
@@ -146,7 +146,7 @@ body{
   }
 
   .startButton{
-    font-family:nosifer;
+    font-family: Nosifer;
     color:red;
     font-size:50px;
 
@@ -184,7 +184,7 @@ $(document).ready(function(){
 </div>
 
 <div class="startGameDiv">
-  <button class="startButton" onclick="audioClear()">START C</button>
+  <button class="startButton" onclick="audioClear()">START</button>
 </div>
 
 <div class="gameDiv">
@@ -200,11 +200,6 @@ $(document).ready(function(){
 </div>
 
 <script>
-jQuery(function($) {
-    if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) {
-        $('body').css('opacity', '1.0') 
-    }
-})
 
   var vid = document.getElementById("afterStart");
 
