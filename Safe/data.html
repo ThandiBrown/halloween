@@ -1,0 +1,28 @@
+
+<html>
+<head>
+  <script type="text/javascript" src="message.js"></script>
+</head>
+<body>
+
+    <h2 id="demo"></h2>
+
+    <button id="a" onClick="printPkg(this.id)"></button>
+    <button id="b" onClick="printPkg(this.id)">Press Me</button>
+    <button id="c" onClick="printPkg(this.id)"></button>
+    <button id="d" onClick="printPkg(this.id)"></button>
+
+    <h2 id="pig"></h2>
+<script>
+var main_node;
+
+var map = new Map();
+const hi = new textPackage("This is the prompt", "Choice A", "Choice B", "Choice C", "Choice D", "hi", null);
+update_Site(hi);
+
+const hiaa = new textPackage("The pointing was sucessful", "New A", "New B", "New C", "New D", "hiaa", hi);
+map.set(hi.choice_a.next, hiaa);
+
+</script>
+</body>
+</html>
