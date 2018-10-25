@@ -184,7 +184,7 @@ $(document).ready(function(){
 </div>
 
 <div class="startGameDiv">
-  <button class="startButton" onclick="audioClear()">START</button>
+  <button class="startButton" onclick="audioClear()">START C</button>
 </div>
 
 <div class="gameDiv">
@@ -200,7 +200,11 @@ $(document).ready(function(){
 </div>
 
 <script>
-
+jQuery(function($) {
+    if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) {
+        $('body').css('opacity', '1.0') 
+    }
+})
 
   var vid = document.getElementById("afterStart");
 
